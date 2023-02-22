@@ -25,5 +25,5 @@ export const TASKS: Task[] = [
     text: 'Visit Mall',
     day: 'May 8th at 12:30pm',
     reminder: false,
-  },
+  }
 ];

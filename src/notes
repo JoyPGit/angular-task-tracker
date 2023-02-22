@@ -1,3 +1,10 @@
-remove the exceptionmthrownin ngOnInit, else @Input won't work
+remove the exception thrown in ngOnInit, else @Input won't work
 
 Property 'onClick' is private and only accessible within class 'ButtonComponent'
+
+npm run serverlocalhots:5000/tasks
+
+to use httpclient add in app.module.ts imports
+
+we have task item embedded in taskc component, so instead of injectng service in task-item component,
+use @Output and EventEmitter to pass to parent component(task component)
