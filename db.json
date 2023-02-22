@@ -25,18 +25,6 @@
       "reminder": false
     },
     {
-      "text": "Mac repair ",
-      "day": "23 Feb 3:30 pm",
-      "reminder": true,
-      "id": 5
-    },
-    {
-      "text": "Mac repair",
-      "day": "15 feb ",
-      "reminder": true,
-      "id": 6
-    },
-    {
       "text": "Mac repair",
       "day": "22 feb",
       "reminder": false,

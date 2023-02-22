@@ -25,3 +25,24 @@ add FormsModule to app-module
    constructor(service : UiService, subscription : Subscription){
 
 we want o capture change in header component as well as add-task component
+
+lazyloading, activatedRoute, snapshot
+pipes
+
+tasks component is the home page
+
+<a href >
+href urefreshes the page, use router-link
+path cannot start with a slash in app-module
+
+exception
+test cases
+
+app.component.html -> base route is injected via router-outlet
+for subsequent stoutes check app-footer
+<div>
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
+
