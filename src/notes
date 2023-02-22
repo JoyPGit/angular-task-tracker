@@ -8,3 +8,20 @@ to use httpclient add in app.module.ts imports
 
 we have task item embedded in taskc component, so instead of injectng service in task-item component,
 use @Output and EventEmitter to pass to parent component(task component)
+
+2-way data binding ngModel
+[()]
+[] -> property/data binding
+() -> event binding
+[(ngModel)
+name attribute with the same value
+[(ngModel)]="dayTime", need to have a variable dayTime which binds with the html element
+
+event.preventDefault
+
+add FormsModule to app-module
+
+ NullInjectorError: No provider for Subscription!
+   constructor(service : UiService, subscription : Subscription){
+
+we want o capture change in header component as well as add-task component

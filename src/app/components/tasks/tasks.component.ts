@@ -9,7 +9,7 @@ import { TaskService } from '../../services/task.service'
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit{
-  public tasks:Task[] = TASKS;
+  public tasks : Task[] = TASKS;
   public taskService;
   constructor(taskService : TaskService){
     this.taskService = taskService;
@@ -19,7 +19,7 @@ export class TasksComponent implements OnInit{
     // this.tasks = this.taskService.getTasks(); // for normal json
     // for observables need to subscribe
     this.taskService.getTasks().subscribe(
-      (tasks) => tasks);
+      (value) => this.tasks=value);
   }
 
   // this returns the task that has been deleted, how to reflect the change on ui?
@@ -30,10 +30,17 @@ export class TasksComponent implements OnInit{
     });
   }
 
-  public toggleReminder(task:Task){
+  public toggleReminder(task:any){
     task.reminder = !task.reminder;
     console.log(task.reminder);
     this.taskService.udpateTaskReminder(task).subscribe(()=>{});
+  }
+
+  // $event
+  // similar to delete, update the global obj
+  public addNewTask(task : any){
+    console.log("add new task", task);
+    this.taskService.addTask(task).subscribe((task)=>{ this.tasks.push(task)});
   }
 
 }

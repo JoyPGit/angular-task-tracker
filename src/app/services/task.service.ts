@@ -31,9 +31,14 @@ export class TaskService {
     return this.httpClient.delete<Task>(url);
   }
 
-  //takes body as 2nd param
+  // takes body as 2nd param
   udpateTaskReminder(task: Task) : Observable<Task>{
     const url = `${this.url}/${task.id}`;
     return this.httpClient.put<Task>(url, task);
+  }
+
+  addTask(task: Task) : Observable<Task>{
+    const url = `${this.url}`;
+    return this.httpClient.post <Task>(url, task, httpOptions);
   }
 }

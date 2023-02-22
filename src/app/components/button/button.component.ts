@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ButtonComponent implements OnInit{
   @Input() text: string | undefined;
   @Input() color : string | undefined;
-  @Output() btnClick = new EventEmitter();
+  @Output() btnClickEventEmit = new EventEmitter();
 
   constructor(){}
 
@@ -20,7 +20,7 @@ export class ButtonComponent implements OnInit{
   
   public onClick():void{
     console.log(this.text);
-    this.btnClick.emit();
+    this.btnClickEventEmit.emit();
   }
 
 }
